@@ -17,6 +17,7 @@
         <option value="primavera">primavera</option>
         <option value="verano">verano</option>
         <option value="otoño">otoño</option>
+        <option value="invierno">invierno</option>
       </select>
       <label for="temparatura_media" class="col-form-label col-form-label-sm">Temperatura Media:</label>
       <input type="number" id="temperatura_media" name="temperatura_media" >
@@ -50,6 +51,12 @@
         atributosDiv.innerHTML += `
             <label for="colores" class="col-form-label col-form-label-sm">Colores:</label>
             <input type="text" id="colores" name="colores">
+          `;
+      }
+      else if (estacion === "invierno") {
+        atributosDiv.innerHTML += `
+            <label for="nieve" class="col-form-label col-form-label-sm">Nieve S/N:</label>
+            <input type="text" id="nieve" name="nieve">
           `;
       }
     }

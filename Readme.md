@@ -57,11 +57,11 @@ En esta descarga encontrará un escenario que deberá resolver para completar co
 - [x] Instalar las librerías necesarias para la ejecución del programa si las necesitase. 
 - [x] La generación del fichero de requirements para el entorno de trabajo.
 - [x] La conexión de todos los elementos del programa en un programa principal.
-- [ ] La prueba de los datos con la información dada. Comprobación que el programa funciona interconectando todos sus elementos.
+- [x] La prueba de los datos con la información dada. Comprobación que el programa funciona interconectando todos sus elementos.
 - [x] La creación del fichero .gitignore que funcione e ignore lo que tiene que ignorar.
 - [x] La creación del repositorio local.
 - [x] El subir en el repositorio en GitHub indicado en su cuenta de GitHub en modo público. No deberá tener colaboradores.
-- [ ] Readme.md con las instrucciones para descargar el proyecto y ejecutarlo y observaciones, para el caso de que existan bugs y no haya alcanzado el tiempo para resolverlos.
+- [x] Readme.md con las instrucciones para descargar el proyecto y ejecutarlo y observaciones, para el caso de que existan bugs y no haya alcanzado el tiempo para resolverlos.
 
 > **Recuerde** que para iniciar un programa desde cero, debe utilizar la técnica de algoritmación que lo guiará por el camino de la solución.
 >

@@ -15,7 +15,7 @@ class Primavera(Estaciones):
         self.flores = flores
 
     def descripcion(self):
-        return f"La {self.nombre} es una estación con una temperatura media de {self.temperatura_media} grados y en la que florecen {self.flores}"
+        return f"La {self.nombre} es una estación con una temperatura media de {self.temperatura_media} grados y en la que florecen {self.flores} flores"
 
 class Verano(Estaciones):
     def __init__(self, nombre, temperatura_media, actividades):
@@ -32,3 +32,11 @@ class Otoño(Estaciones):
 
     def descripcion(self):
         return f"El {self.nombre} es una estación con una temperatura media de {self.temperatura_media} grados y en el que predominan los colores {self.colores}"
+    
+class Invierno(Estaciones):
+    def __init__(self, nombre, temperatura_media, nieve):
+        super().__init__(nombre, temperatura_media)
+        self.nieve = nieve
+
+    def descripcion(self):
+        return f"El {self.nombre} es una estación con una temperatura media de {self.temperatura_media} grados y en la que {self.nieve} cayo nieve"
