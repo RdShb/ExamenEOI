@@ -1,0 +1,35 @@
+<!--estaciones.html-->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Información de la estacion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+</head>
+
+<body>
+    <fieldset>
+        <legend>Información de estacions</legend>
+        <div class="form-group row">
+            {% if estacion %}
+            <p><strong>Nombre:</strong> {{ estacion.nombre }}</p>
+            <p><strong>Temperatura Media:</strong> {{ estacion.temperatura_media }}</p>
+            {% if (estacion.Nombre == "primavera") %}
+            <p><strong>Flores:</strong> {{ estacion.flores }}</p>
+            {% elif (estacion.Nombre== "verano") %}
+            <p><strong>Actividades:</strong> {{ estacion.actividades }}</p>
+            {% elif (estacion.Nombre == "otoño") %}
+            <p><strong>Colores:</strong> {{ estacion.colores }}</p>
+            {% endif %}
+            <p><strong>Descripcion:</strong> {{ estacion.descripcion() }}</p>
+            {% else %}
+            <p>La estacion seleccionada no fue encontrada en la lista.</p>
+            {% endif %}
+            <form method="get" action="/">
+                <button type="submit" class="btn btn-primary">Mas estacions</button>
+            </form>
+        </div>
+    </fieldset>
+</body>
+</html>

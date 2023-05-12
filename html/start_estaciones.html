@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Información de estaciones</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+</head>
+
+<body>
+  <form method="post" action="/estaciones">
+    <legend>Información de estacions</legend>
+    <fieldset  class="d-grid" >
+      <label for="estacion">Selecciona una estacion:</label>
+      <select id="estacion" name="estacion" class="col-form-label col-form-label-sm">
+        <option value="primavera">primavera</option>
+        <option value="verano">verano</option>
+        <option value="otoño">otoño</option>
+      </select>
+      <label for="temparatura_media" class="col-form-label col-form-label-sm">Temperatura Media:</label>
+      <input type="number" id="temperatura_media" name="temperatura_media" >
+      <div id="atributos">
+        <label for="flores" class="col-form-label col-form-label-sm">Flores:</label>
+        <input type="text" id="flores" name="flores" >
+      </div>
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Revisar</button>
+  </form>
+
+  <script>
+    const estacionSelect = document.getElementById("estacion");
+    const atributosDiv = document.getElementById("atributos");
+
+    function mostrarAtributos() {
+      const estacion = estacionSelect.value;
+      atributosDiv.innerHTML = "";
+
+      if (estacion === "primavera") {
+        atributosDiv.innerHTML += `
+        <label for="flores" class="col-form-label col-form-label-sm">Flores:</label>
+        <input type="text" id="flores" name="flores" >
+          `;
+      } else if (estacion === "verano") {
+        atributosDiv.innerHTML += `
+            <label for="actividades" class="col-form-label col-form-label-sm">Actividades:</label>
+            <input type="text" id="actividades" name="actividades">
+          `;
+      } else if (estacion === "otoño") {
+        atributosDiv.innerHTML += `
+            <label for="colores" class="col-form-label col-form-label-sm">Colores:</label>
+            <input type="text" id="colores" name="colores">
+          `;
+      }
+    }
+    estacionSelect.addEventListener("change", mostrarAtributos);
+  </script>
+</body>
+
+</html>
